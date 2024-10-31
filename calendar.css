@@ -1,0 +1,96 @@
+#calendar-container {
+    text-align: center;
+    max-width: 470px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar-table th {
+    padding: 8px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-weight: bold;
+}
+
+#calendar-table td {
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#calendar-table td:hover {
+    background-color: #e6e6e6;
+}
+
+#calendar-table .prev-month,
+#calendar-table .next-month {
+    color: #bfbfbf;
+}
+
+#prev-month,
+#next-month {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#prev-month:hover,
+#next-month:hover {
+    background-color: #00796b;
+}
+
+#calendar-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#current-month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#timeslot-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeslot {
+    width: 100px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none; 
+}
+
+.timeslot.selected {
+    background-color: #dcdcdc; 
+}
+
+#reserve-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.timeslot.reserved {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
